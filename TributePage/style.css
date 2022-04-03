@@ -1,0 +1,90 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+#main{
+    position:relative;
+    height:100vh;
+    background-color: #F4BEEE;
+    margin: 1rem 1rem 1rem 1rem;
+    border-radius:30px;
+}
+
+.heading{
+    position:absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left:2rem;
+    margin-top: 2rem;
+    background-color: antiquewhite;
+    height: 12%;
+    width:40%;
+    border-radius:20px 50% 50% 20px;
+}
+
+.heading h1{
+    margin-left: 2rem;
+    font-size: 5vh;
+    font-weight: 500;
+    color: brown;
+}
+.heading p{
+    font-size:3vh;
+    margin-left:2rem;
+    font-style: italic;
+}
+
+#img-div{
+    position: absolute;
+    text-align: center;
+    display: block;
+    margin-top: 2rem;
+    right:3rem;
+    height: 40vh;
+    width:30%;
+}
+
+#image{
+    max-width:100%;
+    height: auto;
+    display: block;
+    border: red solid 0.1rem;
+    border-radius: 5%;
+    margin: 0 auto;
+}
+
+#figcaption{
+    font-size: 3vh;
+}
+
+#tribute-info{
+    position: absolute;
+    width: 50%;
+    height: 50vh;
+    margin-top: 10rem;
+    margin-left:5rem;
+}
+
+#tribute-info p{
+    font-size: large;
+    color: rgb(6, 134, 12);
+}
+
+.name{
+    font-style: italic;
+}
+
+#tribute-link{
+    background-color: aqua;
+    text-decoration: none;
+    position: absolute;
+    margin-top: 40rem;
+    margin-left: 40rem;
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 10px;
+    color:chocolate;
+    font-size: large;
+}
