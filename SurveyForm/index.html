@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <header class="header">
+        <h1 id="title" class="text-center">Coffee Survey Form</h1>
+        <p id="description" class="text-center">More espresso, less depresso!</p>
+      </header>
+      <form action="" id="survey-form">
+          <div class="form-group">
+              <label for="name" id="name-label">Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your Name" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="email" id="email-label">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your Email" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="age" id="number-label">Age<span class="optional">(optional)</span></label>
+            <input type="number" id="number" min="10" max="100" name="number" placeholder="Enter your Age" class="form-control" required>
+          </div>
+          <div class="form-group">
+              <p>How do you like your coffee?</p>
+              <select name="coffee-type" id="dropdown" class="form-control" required>
+                  <option disabled selected value>Select your coffee</option>
+                  <option value="strongBlack">Strong and Black</option>
+                  <option value="weakMilky">Weak and Milky</option>
+                  <option value="weakBlack">Weak and Black</option>
+                  <option value="inMiddle">Somewhere in the middle</option>
+                  <option value="strongMilky">Strong and Milky</option>
+              </select>
+          </div>
+          <div class="form-group">
+              <p>For what reasons would you drink coffee?</p>
+              <label for=""><input type="radio" name="reasons" class="input-radio" checked value="study">Studies</label>
+              <label for=""><input type="radio" name="reasons" class="input-radio" value="habit">Drinking Habit</label>
+              <label for=""><input type="radio" name="reasons" class="input-radio" value="stress">Release Stress</label>
+              <label for=""><input type="radio" name="reasons" class="input-radio" value="refreshing">Refreshing</label>
+              <label for=""><input type="radio" name="reasons" class="input-radio" value="occasionally">Social Occasions</label>
+              <label for=""><input type="radio" name="reasons" class="input-radio" value="other">Others</label>
+          </div>
+          <div class="form-group">
+              <p>What coffees do you prefer among these? <span class="optional">(select all that apply)</span></p>
+              <label for=""><input type="checkbox" name="coffees" class="input-checkbox" value="espresso">Espresso</label>
+              <label for=""><input type="checkbox" name="coffees" class="input-checkbox" value="cappuccino">Cappuccino</label>
+              <label for=""><input type="checkbox" name="coffees" class="input-checkbox" value="latte">Latte</label>
+              <label for=""><input type="checkbox" name="coffees" class="input-checkbox" value="mocha">Cafe Mocha</label>
+              <label for=""><input type="checkbox" name="coffees" class="input-checkbox" value="americano">Americano</label>
+              <label for=""><input type="checkbox" name="coffees" class="input-checkbox" value="macchiato">Caffe Macchiato</label>
+              <label for=""><input type="checkbox" name="coffees" class="input-checkbox" value="iced">Iced Coffee</label>
+              <label for=""><input type="checkbox" name="coffees" class="input-checkbox" value="irish">Irish Coffee</label>
+              <label for=""><input type="checkbox" name="coffees" class="input-checkbox" value="cortado">Cortado</label>
+              <label for=""><input type="checkbox" name="coffees" class="input-checkbox" value="frappe">Frappe</label>
+              <label for=""><input type="checkbox" name="coffees" class="input-checkbox" value="longBlack">Long Black</label>
+              <label for=""><input type="checkbox" name="coffees" class="input-checkbox" value="redEye">Red Eye</label>
+          </div>
+          <div class="form-group">
+              <p>What is your favorite coffee? What do you love about it?</p>
+              <textarea name="comment" id="comments" class="input-textarea" cols="30" rows="10" placeholder="Enter your answer here.."></textarea>
+          </div>
+          <div class="form-group">
+              <button type="submit" id="submit" class="submit-button">Submit</button>
+          </div>
+          <h3>By Hemant Kumbhar</h3>
+      </form>
+    </div>
+  </body>
+</html>
