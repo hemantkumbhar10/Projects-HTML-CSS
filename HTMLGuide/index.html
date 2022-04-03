@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>HTML Guide</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header class="header">HTML Documentation</header>
+      <ul class="unordered-list">
+        <li><a href="#What_is_HTML?" class="nav-link">What is HTML?</a></li>
+        <li><a href="#Anatomy_of_HTML_element" class="nav-link">Anatomy of HTML element</a></li>
+        <li>
+          <a href="#Creating_your_first_HTML_element" class="nav-link">Creating your first HTML element</a>
+        </li>
+        <li><a href="#Nesting_elements" class="nav-link">Nesting elements</a></li>
+        <li><a href="#Block_versus_Inline_elements" class="nav-link">Block versus Inline elements</a></li>
+        <li><a href="#Empty_elements" class="nav-link">Empty elements</a></li>
+        <li><a href="#Attributes" class="nav-link">Attributes</a></li>
+        <li>
+          <a href="#Adding_attributes_to_an_element" class="nav-link">Adding attributes to an element</a>
+        </li>
+        <li><a href="#Boolean_attributes" class="nav-link">Boolean attributes</a></li>
+        <li>
+          <a href="#Omitting_quotes_around_attribute_values" class="nav-link">Omitting quotes around attribute values</a>
+        </li>
+        <li><a href="#Single_or_Double_quotes?" class="nav-link">Single or Double quotes?</a></li>
+        <li><a href="#Anatomy_of_HTML_document" class="nav-link">Anatomy of HTML document</a></li>
+        <li><a href="#Whitespace_in_HTML" class="nav-link">Whitespace in HTML</a></li>
+        <li><a href="#References" class="nav-link">References</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+        <section id="What_is_HTML?" class="main-section">
+            <header class="header">What is HTML?</header>
+            <p><span class="clue">HTML</span> (Hypertext Markup Language) is <span class="clue">not</span> a programming language. 
+                It is a markup language that tells web browsers how to structure 
+                the web pages you visit. It can be as complicated or as simple 
+                as the web developer wants it to be. HTML consists of a series 
+                of elements, which you use to enclose, wrap, or mark up different 
+                parts of content to make it appear or act in a certain way. The enclosing 
+                tags can make content into a hyperlink to connect to another page, 
+                italicize words, and so on. For example, consider the following line of text:
+            </p>
+            <code><span>&#60</span><span class="tag-color">p</span><span>&#62</span>My cat is very grumpy<span>&#60&#8725</span><span class="tag-color">p</span><span>&#62</span></code>
+            <p>Output:</p>
+            <code>My cat is very grumpy</code>
+        </section>
+        <section id="Anatomy_of_HTML_element" class="main-section">
+            <header class="header">Anatomy of HTML element</header>
+            <p>Let's further explore our paragraph element from the previous section:</p>
+            <div class="img-div">
+                <img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-small.png" alt="">
+            </div>
+            <p>The anatomy of our element is:</p>
+            <ul>
+                <li class="ana-list"><span class="bold-cap">The opening tag:</span>This consists of the name of the element (in this example, 
+                    p for paragraph), wrapped in opening and closing angle brackets. This opening 
+                    tag marks where the element begins or starts to take effect. In this example, 
+                    it precedes the start of the paragraph text.
+                </li>
+                <li class="ana-list">
+                    <span class="bold-cap">The content:</span>This is the content of the element. In this example, it is the paragraph text.
+                </li>
+                <li class="ana-list">
+                    <span class="bold-cap">The closing tag:</span>This is the same as the opening tag, except that it includes a 
+                    forward slash before the element name. This marks where the element ends. Failing to 
+                    include a closing tag is a common beginner error that can produce peculiar results.
+                </li>
+            </ul>
+            <p>The element is the opening tag, followed by content, followed by the closing tag.</p>
+        </section>
+        <section id="Creating_your_first_HTML_element" class="main-section">
+            <header class="header">Creating your first HTML element</header>
+            <p>Edit the line below in the "Editable code" area by wrapping it with the tags<span>&#60</span><span class="tag-color">em</span><span>&#62</span>
+                and <span>&#60&#8725</span><span class="tag-color">em</span><span>&#62</span>.To open the element, put the opening tag <span>&#60</span><span class="tag-color">em</span><span>&#62</span>
+                 at the start of the line. To close the element,put the closing tag <span>&#60&#8725</span><span class="tag-color">em</span><span>&#62</span> 
+                 at the end of the line. 
+                 Doing this should give the line italic 
+                text formatting! See your changes update live in the Output area.
+                If you make a mistake, you can clear your work using the Reset button. If you get really stuck, 
+                press the Show solution button to see the answer.
+            </p>
+        </section>
+        <section id="Nesting_elements" class="main-section">
+            <header class="header">Nesting elements</header>
+            <p>Elements can be placed within other elements. This is called nesting. If we wanted to state 
+                that our cat is very grumpy, we could wrap the word very in a <span>&#60</span>strong<span>&#62</span>element, which means 
+                that the word is to have strong(er) text formatting:
+            </p>
+            <code><span>&#60</span><span class="tag-color">p</span><span>&#62</span>My cat is <span>&#60</span><span class="tag-color">strong</span><span>&#62</span> very <span>&#60&#8725</span><span class="tag-color">strong</span><span>&#62</span> grumpy <span>&#60&#8725</span><span class="tag-color">p</span><span>&#62</span></code>
+            <p>
+                There is a right and wrong way to do nesting. In the example above, 
+                we opened the <span class="clue">p</span> element first, then opened the strong element. For proper 
+                nesting, we should close the <span class="clue">strong</span>  element first, before closing the <span class="clue">p</span> .
+                The following is an example of the wrong way to do nesting:
+            </p>
+            <p class="p-marg">The following is an example of the <i>wrong</i> way to do nesting:</p>
+            <code><span>&#60</span><span class="tag-color">p</span><span>&#62</span>My cat is <span>&#60</span><span class="tag-color">strong</span><span>&#62</span> very grumpy.<span>&#60&#8725</span><span class="tag-color">p</span><span>&#62</span><span>&#60&#8725</span><span class="tag-color">strong</span><span>&#62</span></code>
+            <p>
+                <span class="bold-cap">The tags have to open and close in a way that they are inside or outside one another.</span>With the kind of overlap in the example above, the browser has to guess at your intent. This kind of guessing can result in unexpected results.
+            </p>
+        </section>
+        <section id="Block_versus_Inline_elements" class="main-section">
+            <header class="header">Block versus Inline elements</header>
+            <p class="block-p">There are two important categories of elements to know in HTML: block-level elements and inline elements.</p>
+            <ul>
+                <li class="block-li">
+                    Block-level elements form a visible block on a page. A block-level element appears on a new line 
+                    following the content that precedes it. Any content that follows a block-level element also appears 
+                    on a new line. Block-level elements are usually structural elements on the page. For example, a block-level 
+                    element might represent headings, paragraphs, lists, navigation menus, or footers. A block-level element 
+                    wouldn't be nested inside an inline element, but it might be nested inside another block-level element.
+                </li>
+                <li class="block-li">
+                    Inline elements are contained within block-level elements, and surround only small parts of the document's 
+                    content (not entire paragraphs or groupings of content). An inline element will not cause a new line to appear 
+                    in the document. It is typically used with text, for example an <span>&#60</span><span class="tag-color">a</span><span>&#62</span> element creates a hyperlink, and elements 
+                    such as <span>&#60</span><span class="tag-color">em</span><span>&#62</span> or <span>&#60</span><span class="tag-color">strong</span><span>&#62</span> create emphasis.
+                </li>
+            </ul>
+            <p class="block-p">Consider the following example:</p>
+            <p><span>&#60</span><span class="tag-color">em</span><span>&#62</span> is an inline element. As you see below, the first three elements sit on the same line, with no 
+                space in between. On the other hand, <span>&#60</span><span class="tag-color">p</span><span>&#62</span> is a block-level element. Each <span class="clue">p</span> element appears on a new line, 
+                with space above and below. (The spacing is due to default CSS styling that the browser applies to paragraphs.)</p>
+        </section>
+        <section id="Empty_elements" class="main-section">
+            <header class="header">Empty elements</header>
+            <p>
+                Not all elements follow the pattern of an opening tag, content, and a closing tag. Some elements consist of a single tag, 
+                which is typically used to insert/embed something in the document. For example, the <span>&#60</span><span class="tag-color">img</span><span>&#62</span> element embeds an image file 
+                onto a page:
+            </p>
+            <code><span>&#60</span><span class="tag-color">img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"</span><span>&#62</span></code>
+            <p class="block-p">This would output the following:</p>
+            <div class="imgg">
+                <img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png" alt="">
+            </div>
+        </section>
+        <section id="Attributes" class="main-section">
+            <header class="header">Attributes</header>
+            <p class="block-p">Elements can also have attributes. Attributes look like this:</p>
+            <div class="img-div">
+                <img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-attribute-small.png" alt="">
+            </div>
+            <p class="block-p">
+                Attributes contain extra information about the element that won't appear in the content. In this example, 
+                the class attribute is an identifying name used to target the element with style information.
+            </p>
+            <p class="block-p">An attribute should have:</p>
+            <ul>
+                <li class="block-li">A space between it and the element name. (For an element with more than one attribute, 
+                    the attributes should be separated by spaces too.)
+                </li>
+                <li class="block-li">The attribute name, followed by an equal sign.</li>
+                <li class="block-li">An attribute value, wrapped with opening and closing quote marks.</li>
+            </ul>
+        </section>
+        <section id="Adding_attributes_to_an_element" class="main-section">
+            <header class="header">Adding attributes to an element</header>
+            <p class="block-p">Another example of an element is <span>&#60</span><span class="tag-color">a</span><span>&#62</span>. This stands for anchor. An anchor can make the text it 
+                encloses into a hyperlink. Anchors can take a number of attributes, but several are as follows:
+            </p>
+            <ul>
+                <li class="block-li"><span class="bold-cap">href:</span> This attribute's value specifies the web address for the link. For example: href="https://www.mozilla.org/".</li>
+                <li class="block-li"><span class="bold-cap">title:</span> The title attribute specifies extra information about the link, 
+                    uch as a description of the page that is being linked to. For example, title="The Mozilla homepage". 
+                    This appears as a tooltip when a cursor hovers over the element.
+                </li>
+                <li class="block-li">
+                    <span class="bold-cap">target:</span> The target attribute specifies the browsing context used to display the link. For example, target="_blank" will display the 
+                    link in a new tab. If you want to display the linked content in the current tab, just omit this attribute.
+                </li>
+            </ul>
+        </section>
+        <section id="Boolean_attributes" class="main-section">
+            <header class="header">Boolean attributes</header>
+            <p>
+                Sometimes you will see attributes written without values. This is entirely acceptable. These are 
+                called Boolean attributes. Boolean attributes can only have one value, which is generally the same 
+                as the attribute name. For example, consider the <span class="clue">disabled</span> attribute, which you can assign to form input 
+                elements. (You use this to disable the form input elements so the user can't make entries. The disabled 
+                elements typically have a grayed-out appearance.) For example:
+            </p>
+            <code><span>&#60</span><span class="tag-color">input type="text" disabled="disabled"</span><span>&#62</span></code>
+            <p class="block-p">As shorthand, it is acceptable to write this as follows:</p>
+            <code><span class="comment"><span>&#60</span><span>&#33</span><span>&#8208</span><span>&#8208</span> using the disabled attribute prevents the end user from entering text into the input box <span>&#8208</span><span>&#8208</span><span>&#62</span></span>
+                <span>&#60</span><span class="tag-color">input type="text" disabled</span><span>&#62</span>
+                
+                <span class="comment"><span>&#60</span><span>&#33</span><span>&#8208</span><span>&#8208</span> text input is allowed, as it doesn't contain the disabled attribute <span>&#8208</span><span>&#8208</span><span>&#62</span></span>
+                <span>&#60</span><span class="tag-color">input type="text"</span><span>&#62</span>
+            </code>
+        </section>
+        <section id="Omitting_quotes_around_attribute_values" class="main-section">
+            <header class="header">Omitting quotes around attribute values</header>
+            <p>If you look at code for a lot of other sites, you might come across a number of strange markup styles, including attribute values without quotes. This is 
+                permitted in certain circumstances, but it can also break your markup in other circumstances. For example, if we revisit our link example from earlier, we could write a basic version with only the href attribute.</p>
+        </section>
+        <section id="Single_or_Double_quotes?" class="main-section">
+            <header class="header">Single or Double quotes?</header>
+            <p>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">MDN</a></p>
+        </section>
+        <section id="Anatomy_of_HTML_document" class="main-section">
+            <header class="header">Anatomy of HTML document</header>
+            <p>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">MDN</a></p>
+        </section>
+        <section id="Whitespace_in_HTML" class="main-section">
+            <header class="header">Whitespace in HTML</header>
+            <p>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">MDN</a></p>
+        </section>
+        <section id="References" class="main-section">
+            <header class="header">References</header>
+            <p>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">MDN</a></p>
+        </section>
+    </main>
+  </body>
+</html>
